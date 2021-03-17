@@ -1,29 +1,41 @@
 <?php
-$a = 80;
-switch ($a) {
-    case ($a < 50):
+
+function GPA($score = 56)
+{
+switch ($score) 
+{
+
+    case ($score < 50):
         echo "F";
        break;
-    case ($a <55):
+    case ($score <55):
         echo "D";
         break;
-    case ($a <60):
+    case ($score <60):
         echo "D+";
         break;
-    case ($a <65):
+    case ($score <65):
         echo "C";
         break;
-    case ($a <70):
+    case ($score <70):
         echo "C+";
         break; 
-    case ($a <75):
+    case ($score <75):
         echo "B";
         break;   
         
-    case ($a < 80):
+    case ($score < 80):
         echo "B+";
         break;
     default:
         echo "A";
         break;
+    }
+    echo "<br>";
+    return $score;
+
 }
+echo "<br>";
+echo GPA()
+
+?>
