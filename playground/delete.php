@@ -7,12 +7,12 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $id = $_GET["id"];
     $strSQL = "DELETE FROM `user` WHERE id=".$id;
     $result = $myconn->query($strSQL);
-    // echo $strSQL . "<br>";
+    //echo $strSQL . "<br>";
     echo $result;
     if ($result) {
-        echo "ลบข้อมูลสำเร็จ";
+        echo "Erasable successfully.";
     } else {
-        echo "ไม่สามารถลบข้อมูลได้";
+        echo "The data cannot be deleted.";
     }
 } else {
     echo "id is null";
