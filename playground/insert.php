@@ -7,7 +7,7 @@ $frmUsername = $_POST["username"];
 $frmPassword = $_POST["password"];
 
 if ($frmUsername && $frmPassword); {
-    $strSQL = "INSERT INTO user(username, password_hash,status) ";
+    $strSQL = "UPDATE `user` SET `id`=[value-1],`username`=[value-2],`password_hash`=[value-3],`status`=[value-4] WHERE 1";
     $strSQL .= "VALUES ('" . $frmUsername . "', '" . $frmPassword . "',0)";
 
     $result = $myconn->query($strSQL);

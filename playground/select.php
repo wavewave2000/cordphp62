@@ -13,6 +13,7 @@ $result = $myconn->query($strSQL);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <title>Document</title>
 </head>
 
@@ -30,11 +31,11 @@ $result = $myconn->query($strSQL);
             //echo $row["username"] . "<br>";
         ?>
             <tr>
-                <td><?php echo $row["id"] ?></td>
-                <td><?php echo $row["username"] ?></td>
-                <td><?php echo $row["status"] ?></td>
-                <td>edit</td>
-                <td><a href="delete.php?id=<?php echo $row["id"] ?>">delete</a></td>
+                <td><?php echo $row["id"]?></td>
+                <td><?php echo $row["username"]?></td>
+                <td><?php echo $row["status"]?></td>
+                <td><a href="update.php?id=<?php echo $row["id"]?>&username=<?php echo $row["username"]?>&status=<?php echo $row["status"]?>"><i class="fas fa-cog"></i></td>
+                <td><a href="delete.php?id=<?php echo $row["id"] ?>"><i class="fas fa-trash"></i></a></td>
             </tr>
         <?php
         }
